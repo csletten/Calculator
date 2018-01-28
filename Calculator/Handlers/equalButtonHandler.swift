@@ -51,7 +51,8 @@ class EqualButtonHandler: ButtonHandler {
             }
             if !context.isError{
                 let roundedResult = Double(context.result)?.rounded(toPlaces: 6)
-                context.result = truncate(stringValue: String(format:"%f", roundedResult!))
+//                context.result = normalize(stringValue: String(format:"%f", roundedResult!))
+                context.result = normalize(stringValue: String(roundedResult!))
                 context.leftOperand = context.result
             }
             

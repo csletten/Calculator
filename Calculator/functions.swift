@@ -8,19 +8,24 @@
 
 import Foundation
 
-func truncate(stringValue: String) -> String{
-    let x = Double(stringValue)
-    let remainder = x?.truncatingRemainder(dividingBy: 1)
-    if remainder == 0{
-        let integer = Int(floor(x!))
-        let integerString = String(integer)
-        return integerString
+func normalize(stringValue: String) -> String{
+    var returnValue = ""
+    let isDecimal = stringValue.contains(".")
+    if isDecimal{
+        let doubleValue = Double(stringValue)!
+        let isInteger = floor(doubleValue) == doubleValue
+        if isInteger{
+            let intDouble = Int(doubleValue)
+            returnValue = String(intDouble)
+        }else{
+            returnValue = String(doubleValue)
+        }
+        
     } else{
-        return stringValue;
+        let intValue = Int(stringValue)
+        returnValue = "\(intValue ?? 0)"
     }
-    
-    
+    return returnValue
 }
-
 
 

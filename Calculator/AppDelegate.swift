@@ -1,4 +1,4 @@
-//
+    //
 //  AppDelegate.swift
 //  Calculator
 //
@@ -43,18 +43,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var myViewController: ViewController!
     
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        
-        if shortcutItem.type == "copy" {
-            var copyNumber = myViewController.context.result
-            UIPasteboard.general.string = copyNumber
-            completionHandler(true)
-        }
-        else {
-            completionHandler(false)
-        }
-        
-    }
+//    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+//
+//        if shortcutItem.type == "copy" {
+//            let copyNumber = context.result
+//            UIPasteboard.general.string = copyNumber
+//            completionHandler(true)
+//        }
+//        else {
+//            completionHandler(false)
+//        }
+//    }
 
 
 }

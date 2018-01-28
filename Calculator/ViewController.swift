@@ -27,6 +27,8 @@ class ViewController: UIViewController,Internal {
     
     @IBAction func numbersButton(_ sender: UIButton){
         let tag = sender.tag <= 10 ? sender.tag-1 : sender.tag
+        
+//        print(sender.tag)
         let handler = handlers[tag]
         handler?.handle(context: &context, tag: tag, ui: self)
         

@@ -17,7 +17,7 @@ class PlusMinusButtonHandler: ButtonHandler {
                 hapticError()
             } else{
                 context.rightOperand = String(Double(context.rightOperand)! * -1)
-                ui.displayResult(string: truncate(stringValue: context.rightOperand))
+                ui.displayResult(string: normalize(stringValue: context.rightOperand))
                 hapticSuccess()
             }
             

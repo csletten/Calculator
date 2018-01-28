@@ -9,16 +9,16 @@
 import Foundation
 
 struct AppConstants{
-    static let KEY_ZERO = 1
-    static let KEY_ONE = 2
-    static let KEY_TWO = 3
-    static let KEY_THREE = 4
-    static let KEY_FOUR = 5
-    static let KEY_FIVE = 6
-    static let KEY_SIX = 7
-    static let KEY_SEVEN = 8
-    static let KEY_EIGHT = 9
-    static let KEY_NINE = 10
+    static let KEY_ZERO = 0
+    static let KEY_ONE = 1
+    static let KEY_TWO = 2
+    static let KEY_THREE = 3
+    static let KEY_FOUR = 4
+    static let KEY_FIVE = 5
+    static let KEY_SIX = 6
+    static let KEY_SEVEN = 7
+    static let KEY_EIGHT = 8
+    static let KEY_NINE = 9
     static let KEY_AC = 11
     static let KEY_PLUSMINUS = 12
     static let KEY_PERCENT = 13

@@ -18,14 +18,14 @@ class PercentButtonHandler: ButtonHandler {
                     hapticError()
                 } else {
                     context.rightOperand = String(Double(context.rightOperand)! / 100)
-                    ui.displayResult(string: truncate(stringValue: context.rightOperand))
+                    ui.displayResult(string: normalize(stringValue: context.rightOperand))
                 }
             } else{
                 if context.result == "0"{
                     hapticError()
                 } else {
                     context.result  = String(Double(context.result)! / 100)
-                    ui.displayResult(string: truncate(stringValue: context.result))
+                    ui.displayResult(string: normalize(stringValue: context.result))
                 }
                 
             }
