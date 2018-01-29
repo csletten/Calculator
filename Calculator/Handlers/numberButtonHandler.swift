@@ -21,13 +21,7 @@ class NumberButtonHandler: ButtonHandler {
                 if context.operation == 0 {
                     context.rightOperand += String(tag)
                 } else {
-                    if (context.rightOperand.contains(".")){
-                        context.rightOperand = context.rightOperand + String(tag)
-                    } else{
-                        context.rightOperand = String(Int(context.rightOperand)! + tag)
-                    }
-                    
-                 
+                    context.rightOperand = context.rightOperand + String(tag)                    
                     
                 }
                 ui.displayResult(string: context.rightOperand)
