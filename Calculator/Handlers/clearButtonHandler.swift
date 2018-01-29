@@ -21,6 +21,7 @@ class ClearButtonHandler: ButtonHandler {
         ui.displayResult(string: "0")
         context.rightOperand = "0"
         context.hasComma = false;
+        context.result = ""
         ui.makeOrange(tag: AppConstants.KEY_DIVIDE)
         ui.makeOrange(tag: AppConstants.KEY_MULTIPLY)
         ui.makeOrange(tag: AppConstants.KEY_SUBTRACT)
