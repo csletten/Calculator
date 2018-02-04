@@ -20,6 +20,7 @@ struct Context{
     var isAC = true;
     var hasInput = false;
     var hasComma = false;
+    var isPercent = false
     
     mutating func reset(){
         rightOperand = ""

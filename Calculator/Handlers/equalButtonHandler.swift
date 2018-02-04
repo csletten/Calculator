@@ -51,15 +51,19 @@ class EqualButtonHandler: ButtonHandler {
             }
             if !context.isError{
                 let roundedResult = Double(context.result)?.rounded(toPlaces: 6)
-//                context.result = normalize(stringValue: String(format:"%f", roundedResult!))
                 context.result = normalize(stringValue: String(roundedResult!))
                 context.leftOperand = context.result
             }
-            
+            context.rightOperand = "0";
         } else if context.leftOperand == ""{
-            context.result = "0"
+            context.result = context.rightOperand
+            hapticSuccess()
         }
-        context.isError ? ui.displayResult(string: "Feil") : ui.displayResult(string: context.result)
+        if context.isError{
+            ui.displayResult(string: "Feil")
+        } else{
+            ui.displayResult(string: context.result)
+        }
         context.hasComma = context.result.contains(".") ? true : false
     }
     

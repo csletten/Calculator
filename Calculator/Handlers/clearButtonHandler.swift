@@ -11,7 +11,7 @@ import Foundation
 class ClearButtonHandler: ButtonHandler {
     func handle(context: inout Context, tag: Int, ui: Internal) {
         if context.isAC{
-            context.leftOperand = "0"
+            context.leftOperand = ""
             context.operation = 0
             context.hasInput = false;
         } else{

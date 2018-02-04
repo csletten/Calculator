@@ -19,6 +19,8 @@ class PercentButtonHandler: ButtonHandler {
                 } else {
                     context.rightOperand = String(Double(context.rightOperand)! / 100)
                     ui.displayResult(string: normalize(stringValue: context.rightOperand))
+                    context.isPercent = true
+                    hapticSuccess()
                 }
             } else{
                 if context.result == "0"{
@@ -26,10 +28,11 @@ class PercentButtonHandler: ButtonHandler {
                 } else {
                     context.result  = String(Double(context.result)! / 100)
                     ui.displayResult(string: normalize(stringValue: context.result))
+                    context.isPercent = true
+                    hapticSuccess()
                 }
                 
             }
-            hapticSuccess()
         }
     }
     

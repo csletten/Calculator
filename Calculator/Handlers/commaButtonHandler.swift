@@ -14,6 +14,7 @@ class CommaButtonHandler: ButtonHandler {
             context.rightOperand += "."
             context.hasComma = true;
             ui.displayResult(string: context.rightOperand)
+            
         } else{
             hapticError()
         }

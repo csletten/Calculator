@@ -17,24 +17,31 @@ class NumberButtonHandler: ButtonHandler {
             context.performMath = false
         }
         else {
-            if context.rightOperand != "0"{
-                if context.operation == 0 {
-                    context.rightOperand += String(tag)
-                } else {
-                    context.rightOperand = context.rightOperand + String(tag)                    
-                    
-                }
-                ui.displayResult(string: context.rightOperand)
-                
-            } else{
-                if !context.hasInput{
-                    context.isAC = false
-                    ui.changeClearButton(isAC: context.isAC)
-                    context.hasInput = true;
-                }
+            if context.isPercent{
                 context.rightOperand = String(tag)
+                context.isPercent = false
                 ui.displayResult(string: context.rightOperand)
+            } else{
+                if context.rightOperand != "0"{
+                    if context.operation == 0 {
+                        context.rightOperand += String(tag)
+                    } else {
+                        context.rightOperand = context.rightOperand + String(tag)
+                        
+                    }
+                    ui.displayResult(string: context.rightOperand)
+                    
+                } else{
+                    if !context.hasInput{
+                        context.isAC = false
+                        ui.changeClearButton(isAC: context.isAC)
+                        context.hasInput = true;
+                    }
+                    context.rightOperand = String(tag)
+                    ui.displayResult(string: context.rightOperand)
+                }
             }
+            
         }
     }
 }
